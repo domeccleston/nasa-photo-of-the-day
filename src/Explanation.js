@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 
 function Explanation(props) {
-    console.log(props)
     const displayStatus = props.displayStatus;
     return (
         <>

@@ -13,15 +13,15 @@ const [title, setTitle] = useState('');
 const [explanationText, setText] = useState('');
 const [textIsDisplayed, toggleTextDisplay] = useState(false);
 
-const displayTextOnClick = () => {
+const displayTextOnClick = (event) => {
   textIsDisplayed === false ? toggleTextDisplay(true) : toggleTextDisplay(false);
-  console.log(textIsDisplayed);
+  const upperContainer = document.querySelector('.upper-container');
+  upperContainer.classList.add('explanation-active');
 };
 
   useEffect(() => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=UduqvDaP7LGRKcA1oSOeQkx1Iyow9Qo7NujzYwmc')
     .then(response => {
-      console.log(response.data)
       setDailyPhoto(response.data.hdurl)
       setTitle(response.data.title)
       setText(response.data.explanation)

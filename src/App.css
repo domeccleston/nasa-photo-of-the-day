@@ -8,9 +8,6 @@ body::-webkit-scrollbar {
   height: 0 !important;
 }
 
-.daily-photo-container {
-}
-
 .daily-photo {
   height: 200vh;
   width: 100vw;
@@ -52,5 +49,5 @@ button:active {
 }
 
 .explanation-active {
-  display: block;
+  top: 100px;
 }
